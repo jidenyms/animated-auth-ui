@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A cinematic animated authentication experience built by Olajide Balogun.">
+  <title>Nova — Animated Authentication</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <main class="auth-shell">
+    <section class="story-panel" aria-label="Nova introduction">
+      <nav class="brand-row">
+        <a class="brand" href="#" aria-label="Nova home">
+          <span class="brand-mark"><span></span></span>
+          <span>NOVA</span>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm6.36 2.64a1 1 0 0 1 0 1.42l-.7.7a1 1 0 0 1-1.42-1.42l.7-.7a1 1 0 0 1 1.42 0ZM19 11h1a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2Zm-.64 6.94a1 1 0 0 1-1.42 0l-.7-.7a1 1 0 0 1 1.42-1.42l.7.7a1 1 0 0 1 0 1.42ZM12 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Zm-4.24-.76-.7.7a1 1 0 0 1-1.42-1.42l.7-.7a1 1 0 0 1 1.42 1.42ZM5 11a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h1Zm2.76-4.66a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 1.42-1.42l.7.7ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>
+        </button>
+      </nav>
+
+      <div class="orbital-scene" aria-hidden="true">
+        <div class="planet">
+          <div class="planet-glow"></div>
+          <div class="planet-core"></div>
+        </div>
+        <div class="orbit orbit-one"><i></i></div>
+        <div class="orbit orbit-two"><i></i></div>
+        <div class="orbit orbit-three"><i></i></div>
+        <span class="star star-one"></span>
+        <span class="star star-two"></span>
+        <span class="star star-three"></span>
+      </div>
+
+      <div class="story-copy">
+        <p class="eyebrow">A NEW DIGITAL ORBIT</p>
+        <h1>Enter a space built around <em>you.</em></h1>
+        <p>One account. A universe of ideas, projects, and possibilities waiting on the other side.</p>
+        <div class="story-meta">
+          <span>01</span>
+          <div class="progress"><i></i></div>
+          <span>03</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-wrap">
+        <div class="form-heading">
+          <span class="mini-mark"><span></span></span>
+          <p class="status"><i></i> SECURE CONNECTION</p>
+          <h2 class="form-title">Welcome back</h2>
+          <p class="form-subtitle">Sign in to continue your journey with Nova.</p>
+        </div>
+
+        <div class="auth-tabs" role="tablist" aria-label="Authentication options">
+          <button class="auth-tab active" type="button" role="tab" aria-selected="true" data-view="login">Sign in</button>
+          <button class="auth-tab" type="button" role="tab" aria-selected="false" data-view="signup">Create account</button>
+          <span class="tab-slider" aria-hidden="true"></span>
+        </div>
+
+        <form class="auth-form" novalidate>
+          <div class="name-row hidden-field" aria-hidden="true">
+            <div class="field-group">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" placeholder="Olajide" autocomplete="given-name">
+            </div>
+            <div class="field-group">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" type="text" placeholder="Balogun" autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <div class="input-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 7 8-5H4l8 5Zm0 2.3L4 9.2V17h16V9.2l-8 5.1Z"/></svg>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <span class="field-error">Enter a valid email address.</span>
+          </div>
+
+          <div class="field-group">
+            <div class="label-row">
+              <label for="password">Password</label>
+              <button class="forgot-link" type="button">Forgot password?</button>
+            </div>
+            <div class="input-shell">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a2 2 0 0 1 2 2v8H4v-8a2 2 0 0 1 2-2h1Zm2 0h6V8a3 3 0 0 0-6 0v2Zm3 3a2 2 0 0 0-1 3.73V18h2v-1.27A2 2 0 0 0 12 13Z"/></svg>
+              <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="8" required>
+              <button class="password-toggle" type="button" aria-label="Show password">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.5 0 9.5 5.5 9.5 7s-4 7-9.5 7S2.5 13.5 2.5 12 6.5 5 12 5Zm0 2c-3.7 0-6.7 3.2-7.4 5 .7 1.8 3.7 5 7.4 5s6.7-3.2 7.4-5c-.7-1.8-3.7-5-7.4-5Zm0 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+              </button>
+            </div>
+            <span class="field-error">Password must contain at least 8 characters.</span>
+          </div>
+
+          <label class="remember-row">
+            <input type="checkbox" name="remember">
+            <span class="custom-check"><svg viewBox="0 0 12 10" aria-hidden="true"><path d="m1 5 3 3 7-7"/></svg></span>
+            <span>Keep me signed in</span>
+          </label>
+
+          <button class="submit-button" type="submit">
+            <span class="button-label">Enter Nova</span>
+            <span class="button-arrow">↗</span>
+            <span class="button-loader" aria-hidden="true"></span>
+          </button>
+
+          <div class="divider"><span>or continue with</span></div>
+
+          <div class="social-row">
+            <button type="button" aria-label="Continue with Google"><strong>G</strong><span>Google</span></button>
+            <button type="button" aria-label="Continue with GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2.23c-3.23.7-3.91-1.37-3.91-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.58-.3-5.29-1.29-5.29-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18A11 11 0 0 1 12 6.23c.98 0 1.95.13 2.87.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.72 5.39-5.31 5.68.42.36.79 1.07.79 2.16v3.24c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .8Z"/></svg>
+              <span>GitHub</span>
+            </button>
+          </div>
+
+          <p class="legal">By continuing, you agree to Nova's <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message">Welcome to Nova. Demo complete!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
